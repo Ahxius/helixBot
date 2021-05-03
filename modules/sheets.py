@@ -8,7 +8,7 @@ from discord import Embed
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 SPREADSHEET_ID = '1akqjBVjAgmPCWsW2xL-p9vHhdfwuIpZIG8rYeLtcVp8'
-RANGE_NAME = 'Mainframe!B8:I'
+RANGE_NAME = 'Mainframe!B7:I'
 creds = None
 if os.path.exists('token.pickle'):
     with open('token.pickle', 'rb') as token:
@@ -35,7 +35,7 @@ class Sheets(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.command(name='checksheet', aliases=['info', 'ap', 'rp'])
+    @commands.command(name='checksheet', aliases=['info', 'ep', 'rp', 'hp'])
     async def checksheet(self, context, *, user: str = None):
         if not user:
             await context.send('``h?checksheet <user>``')
