@@ -30,3 +30,7 @@ class Miscellaneous(commands.Cog):
         if not voice_channel.members:
             await context.send(f'{context.author.mention}, your private VC timed out.')
             await voice_channel.delete()
+
+
+def setup(client):
+    client.add_cog(Miscellaneous(client))
