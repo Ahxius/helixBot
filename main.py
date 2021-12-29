@@ -23,7 +23,7 @@ class help_class(MinimalHelpCommand):
 client.help_command = help_class()
 
 
-for module in os.listdir('modules'):
+for module in os.listdir('/home/ubuntu/helixBot/modules'):
     if not module.endswith('.py'):
         continue
     try:
